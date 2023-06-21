@@ -1,0 +1,32 @@
+create database se_project;
+
+use se_project;
+
+ create table users
+ (email varchar(50) primary key,
+ password varchar(10),
+ name varchar(50),
+ DOB date,
+ contact varchar(13));
+
+ create table projects
+(creators varchar(300) ,
+topic varchar(300),
+domain varchar(20),
+description varchar(5000),
+keywords varchar(150),
+future_scope varchar(3000),
+awards varchar(3000),
+contacts varchar(200));
+
+ ALTER TABLE users ADD column address varchar(500);
+ ALTER TABLE users ADD column college varchar(100);
+ ALTER TABLE users ADD column degree varchar(50);
+ ALTER TABLE users ADD column branch varchar(50);
+ ALTER TABLE users ADD COLUMN type VARCHAR(12) AFTER address;
+ ALTER TABLE users ADD COLUMN company VARCHAR(100);
+ ALTER TABLE users ADD COLUMN post VARCHAR(50);
+
+
+ ALTER TABLE projects ADD COLUMN year CHAR(4) after domain;
+ ALTER TABLE projects ADD COLUMN added_by varCHAR(50) ;

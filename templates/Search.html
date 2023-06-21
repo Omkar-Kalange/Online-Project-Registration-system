@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>SY32</title>
+	<style>
+		header{
+			background-color: #1C2FD8;
+			color: white;
+			padding: 4px 20px;
+		}
+		
+		button {
+			padding-left: 50px;
+			padding-right: 50px;
+			padding-top: 9px;
+			padding-bottom: 20px;
+			
+			border-width: 5px;
+			border-color: cyan;
+			border-radius: 12px;
+			cursor: pointer;
+			font-size:250%;
+		}
+
+		button:hover{
+			background-color : #66b5ff
+		}
+		
+		input {
+			width: 60%;
+			padding: 20px 20px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			border: 5px solid #ccc;
+			box-sizing: border-box;
+			font-size:200%;
+		}
+	</style>
+</head>
+
+<body>
+	<header><h1> Search Project </h1></header>
+	
+	<br><br><br><br><br><br><br><br>
+	
+	<form action="http://localhost:5000/show-project" method="post">
+		<center>
+			<p><input type="text" name="topic" placeholder="Enter project topic to search..." required>
+			<button type="submit">🔍</button></p>
+		</center>
+	</form>

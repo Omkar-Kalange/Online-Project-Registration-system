@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+<head> <title>SY32</title>
+	<style>
+		body {font-family: Arial, Helvetica, sans-serif; font-size:100%}
+		form {border: 3px solid #f1f1f1;}
+
+		input, select {
+			width: 40%;
+			padding: 12px 20px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+			box-sizing: border-box;
+			font-size:100%;
+		}
+
+		button {
+			padding: 14px 20px;
+			margin: 8px 0;
+			border-width: 5px;
+			border-color: cyan;
+			border-radius: 12px;
+			cursor: pointer;
+			width: 100%;
+			font-size:100%;
+		}
+
+		button:hover {
+			background-color : #66b5ff
+		}
+
+		.imgcontainer {
+			text-align: center;
+			margin: 24px 0 12px 0;
+		}
+
+		img.avatar {
+			border-radius: 50%;
+		}
+
+		.container {
+			text-align: center;
+			padding: 16px;
+		}
+		
+		.login {
+			width: 60%;
+		}
+		
+		a:link {
+			color: cyan;
+		}
+
+		a:visited {
+			color: cyan;
+		}
+	</style>
+</head>
+
+<body>
+	Login Form
+
+	<form action="http://localhost:5000/fp1" method = "post">
+		<div class="imgcontainer">
+			<img src="User.jpeg" width=150px height=150px  alt="Avatar" class="avatar">
+		</div>
+
+		<div class="container">
+			<label for="u_type"><b>User Type</b></label>
+			<select name="u_type" required>
+				<option value="Student">Student</option>
+				<option value="Faculty">Faculty</option>
+				<option value="Professional">Professional</option>
+			</select>
+			</br>
+			<label for="email"><b>Email id</b></label>
+			<input type="email" placeholder="Enter Email id" name="email" required>
+			</br>
+			<label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="psw" required>
+			</br>
+			<button class="login" type="submit">Login</button>
+		</div>
+
+		<div class="container" style="background-color:#1C2FD8; color:white;">
+			New User? <a href="SignUp.html">Sign up</a>
+		</div>
+	</form>
+
+</body>
+</html>

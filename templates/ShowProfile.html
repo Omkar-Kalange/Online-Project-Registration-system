@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>SY32</title>
+	<style>
+		body {font-family: Arial, Helvetica, sans-serif; font-size:200%}
+
+		header{
+			background-color: #1C2FD8;
+			color: white;
+			padding: 4px 20px;
+			text-align: center;
+		}
+		
+		div{
+			text-align: center;
+			border-style: solid;
+			border-color: black;
+			background-color: #f1f1f1;
+			margin:10px 300px;
+		}
+		
+		hr{
+			border: 2px solid black;
+		}
+		button{
+			padding: 14px 0px;
+			margin: 8px 0px;
+			border-width: 5px;
+			border-color: cyan;
+			border-radius: 12px;
+			cursor: pointer;
+			width: 40%;
+			font-size:100%;
+
+		}
+		
+		button:hover{
+			background-color : #66b5ff;
+		}
+		
+		.signout{
+			background-color: #cc0000;
+			border-color: yellow;
+			color: white;
+		}
+
+		.signout:hover{
+			background-color : orange;
+		}
+
+	</style>
+</head>
+
+<body>
+	<header><h1>Profile</h1></header>
+	
+	<div>
+		<h1>{{ name }}</h1>
+		<p>|| D.o.B. {{ dob }} ||</p>
+		{% if u_type=='Student' %}
+		<p><i>{{ degree }}</i>, in</p>
+		<p><b><i>{{ branch }}</i></b>, at</p>
+		<p><h2><u>{{ college }}</u></h2></p>
+
+		{% elif u_type=='Faculty' %}
+		<p><b><i>{{ post }}</i></b>, at</p>
+		<p><h2><u>{{ college }}</u></h2></p>
+
+		{% else %}
+		<p><b><i>{{ post }}</i></b>, at</p>
+		<p><h2><u>{{ company }}</u></h2></p>
+
+		{% endif %}
+		<hr>
+		<p style="text-align: left; padding-left:20px">Contact: {{ contact}}</p>
+		<p style="text-align: left; padding-left:20px">Address: {{ address }}</p>
+	</div>
+		<form action="http://localhost:5000/edit-profile" method="post">
+			<center><button>Edit profile</button></center>
+		</form>
+		<form action="http://localhost:5000/sign-out" method="post">
+			<center><button class='signout'>Sign out</button></center>
+		</form>
+		
+</body>
+
+</html>

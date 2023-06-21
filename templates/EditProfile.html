@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>SY32</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename = 'style2.css')}}">
+</head>
+
+<body>
+	<header><h1>Edit Profile</h1></header>
+	<form action="http://localhost:5000/fp" method="post">
+		</br>
+		<label for="name">Name: </label></br><input type="text" name="name" autocomplete="off" required></input>
+		</br>
+		<label for="dob">DoB: </label></br><input type="date" name="dob" required></input>
+		</br>
+		<label for="ph">Ph.: </label></br><input type="number" name="ph" autocomplete="off" required></input>
+		</br>
+		<label for="addr">Address: </label></br><textarea name="addr" autocomplete="off" required></textarea>
+		<hr>
+		</br>
+		{% if u_type=='Student' %}
+		<label for="College">College: </label></br><input type="text" name="College" autocomplete="off" required></input>
+		</br>
+		<label for="deg">Degree: </label></br><input type="text" autocomplete="off" name="deg" required></input>
+		</br>
+		<label for="branch">Branch/Specialization: </label></br><input type="text" autocomplete="off" name="branch" required></input>
+		</br>
+		{% elif u_type=='Faculty' %}
+		<label for="College">College: </label></br><input type="text" name="College" autocomplete="off" required></input>
+		</br>
+		<label for="post">Post: </label></br><input type="text" autocomplete="off" name="post" required></input>
+		</br>
+		{% else %}
+		<label for="Company">Company: </label></br><input type="text" autocomplete="off" name="Company" required></input>
+		</br>
+		<label for="post">Post: </label></br><input type="text" name="post" autocomplete="off" required></input>
+		{% endif %}
+		<hr>
+		</br>
+		<button type="submit">Submit</button>
+		</br></br>
+	</form>
+</body>
+
+</html>

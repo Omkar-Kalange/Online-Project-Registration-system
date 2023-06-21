@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>SY32</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename = 'style2.css')}}">
+</head>
+
+<body>
+	<header><h1>Add project</h1></header>
+	<form action="http://localhost:5000/add-project1" method="post">
+		</br>
+		<label for="names">Names*: </label></br><input type="text" name="names" placeholder="ABC, XYZ, PQR,..." autocomplete="off" required>
+		</br>
+		<label for="topic">Topic*: </label></br><input type="text" name="topic" placeholder="ABC, XYZ, PQR,..." autocomplete="off" required>
+		</br>
+		<label for="domain">Domain*: </label></br><input type="text" name="domain" placeholder="ABC, XYZ, PQR,..." autocomplete="off" required>
+		</br>
+		<label for="year">Year*: </label></br><input type="text" placeholder="Ex. 2022" name="year" autocomplete="off" required>
+		</br>
+		<label for="desc">Description*: </label></br><textarea name="desc" rows="20" style="width:90%" autocomplete="off" required></textarea>
+		</br>
+		<label for="keyw">Keywords*: </label></br><input type="text" name="keyw" placeholder="ABC, XYZ, PQR,..." autocomplete="off" required>
+		</br>
+		<label for="future">Future Scope: </label></br><textarea name="future" rows="20" style="width:90%" autocomplete="off"></textarea>
+		</br>
+		<label for="award">Awards: </label></br><textarea name="award" rows="20" style="width:90%" autocomplete="off"></textarea>
+		</br>
+		<label for="contact">Contacts*: </label></br><input type="text" name="contact" placeholder="Enter emails or ph. no.s" autocomplete="off" required>
+		</br>
+		<button type="submit">Submit</button>
+		</br></br>
+	</form>
+</body>
+
+</html>

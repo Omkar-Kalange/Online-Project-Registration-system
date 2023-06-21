@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>SY32</title>
+	<style>
+		header{
+			background-color: #1C2FD8;
+			color: white;
+			padding: 4px 20px;
+		}
+		
+		button:hover{
+			background-color : #66b5ff
+		}
+		
+		p{
+			text-align: justify;
+			font-size: 130%;
+		}
+		
+		div{
+			margin-left: 40px;
+			margin-right: 40px;
+			background-color: #f1f1f1;
+		}
+
+		div p{
+			padding-left:20px;
+			padding-right:20px;
+		}
+
+		hr{
+			border: solid white;
+		}
+
+		button {
+			padding: 14px 20px;
+			margin: 8px 0;
+			border-width: 5px;
+			border-color: cyan;
+			border-radius: 12px;
+			cursor: pointer;
+			width: 20%;
+			font-size:130%;
+		}
+
+		button:hover {
+			background-color : #66b5ff;
+		}
+
+	</style>
+</head>
+
+<body>
+	<header><h1> {{ topic }} </h1></header>
+	<p>Names : {{names}} </p>
+	<p>Domain : {{domain}} </p>
+	<p>Year : {{year}} </p>
+	<p>Keywords : {{ keywords }} </p>
+	
+	<div>
+		<hr>
+		<p><center><h2><u>Description</u></h2></center></p>
+		<p> {{description}} </p>
+		{% if future_scope %}
+			<hr> 
+			<p><center><h2><u>Future scope</u></h2></center></p>
+			<p>{{ future_scope }}</p>
+		{% endif %}
+		{% if awards %}
+			<hr> 
+			<p><center><h2><u>Awards</u></h2></center></p>
+			<p>{{ awards }}</p>
+		{% endif %}
+		<hr>
+	</div>
+	
+	<p>Contact(s): {{contacts}} </p>
+	
+	<form action="http://localhost:5000/fp2" method="post">
+		<center><button type="submit">Return to Homepage</button></center>
+		</br>
+	</form>
+
+</body>
+
+</head>
